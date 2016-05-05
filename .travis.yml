@@ -1,19 +1,19 @@
 language: node_js
 node_js: node
-
+deploy:
+  provider: heroku
+  app: sup
+  api_key:
+    secure: b7WzQVgRbVnTecIcdltaOi9dNCFR8BMkZgPUMNk6IuVaz02GN/nkrEoRLarzmonMpl4L48+YlfnIGrO3J2pFJ//gz09+AkJyMSj6miSWVrT8XUeee4HDWrgTAXLs8bY2bX3sN82imVGEopA1PkXXZ/3MYWi3BkjogX1MXKlFwbHrYEF6r2k5Rq7ClYv8X7yeBOwT3zM7cIPsjvE9e6yv4VzL/zP77SPmNZPuLbAmseuDNFF+G1usWoD+SMWzaDn1GOOwTIb1qbbyL1g6VHgI5gYY3YDAP7hz+zYKVOcn1Bc3/PjqyiHs1vyx3SDuouGKJUNi0mfBN9YLyKRn2F6Ql3DQ2bAgdtnqv+4RrDsfNtGTaqQNL2WLeZHcgbXIi8S2H69Z3p3DLw95gpl+cCsd+QR1W9L1qOHjvmVFA8VP5ZIWLUNuhrImjkP9ejhFYTkNT/5zsM8D7M35TPiySn0kCD5QNz6X2gc2zDltgCO5/xkjp6uw5tEHxBW/xRwfMXm+qG/V34JdVPIzKX1jBwENGdxUEEy3/zSm5VxLl+YRwUTAn1ILFa3zLJzTh20JUrEnCpsik+eNgv2RFpgpAgPVr4IjH9dG3T8coTbkNsFcXm8lkht7CI1sIaFm+6fiqNQTcnUyAE94RoEKg6gJ6PdR0rxO+OiLiBjwG8dcw+g4HXM=
 services:
 - mongodb
-
-
 env:
-  - CXX=g++-4.8
-
+- CXX=g++-4.8
 addons:
   apt:
     sources:
-      - ubuntu-toolchain-r-test
-      - mongodb-3.2-precise
-
+    - ubuntu-toolchain-r-test
+    - mongodb-3.2-precise
     packages:
-      - g++-4.8
-      - mongodb-org-server
+    - g++-4.8
+    - mongodb-org-server
